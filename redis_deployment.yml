@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: redis-pod
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       name: redis-pod
@@ -15,7 +15,3 @@ spec:
       containers:
       - name: redis-pod
         image: redis
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
