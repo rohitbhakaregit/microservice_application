@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: redis-pod
 spec:
+  replicas: 3
   selector:
     matchLabels:
       name: redis-pod
