@@ -5,7 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: voting-app
+    name: voting-app
+    app: complete-voting-app
   ports:
   - port: 80
     targetPort: 80

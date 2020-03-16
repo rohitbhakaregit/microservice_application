@@ -6,11 +6,12 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: voting-result
+      name: voting-result
   template:
     metadata:
       labels:
-        app: voting-result
+        name: voting-result
+        app: complete-voting-app
     spec:
       containers:
       - name: voting-result

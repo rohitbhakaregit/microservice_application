@@ -5,11 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: worker
+      name: worker
   template:
     metadata:
       labels:
-        app: voting-app
+        name: worker
+        app: complete-voting-app 
     spec:
       containers:
       - name: worker

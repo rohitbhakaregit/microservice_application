@@ -4,8 +4,8 @@ metadata:
   name: db
 spec:
   selector:
-    name: postgres-pod
-    app: voting-result
+    name: db
+    app: complete-voting-app
   ports:
   - port: 5432
     targetPort: 5432

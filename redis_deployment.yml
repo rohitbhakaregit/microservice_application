@@ -1,17 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-pod
+  name: redis
 spec:
   replicas: 2
   selector:
     matchLabels:
-      name: redis-pod
+      name: redis
   template:
     metadata:
       labels:
-        name: redis-pod
+        name: redis
+        app: complete-voting-app
     spec:
       containers:
-      - name: redis-pod
+      - name: redis
         image: redis

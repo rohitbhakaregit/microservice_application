@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres-pod
+  name: db
 spec:
   selector:
     matchLabels:
-      name: postgres-pod
+      name: db
   template:
     metadata:
       labels:
-        name: postgres-pod
+        name: db
+        app: complete-voting-app
     spec:
       containers:
-      - name: postgres-pod
+      - name: db
         image: postgres:9.5
         resources:
           limits:
