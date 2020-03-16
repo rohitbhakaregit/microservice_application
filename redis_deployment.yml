@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: voting-app
+        app: redis-pod
     spec:
       containers:
       - name: redis-pod
