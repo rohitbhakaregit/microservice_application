@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-pod
+spec:
+  selector:
+    matchLabels:
+      app: postgres-pod
+  template:
+    metadata:
+      labels:
+        app: postgres-pod
+    spec:
+      containers:
+      - name: postgres-pod
+        image: postgres:9.5
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+          - POSTGRES_HOST_AUTH_METHOD=trust
