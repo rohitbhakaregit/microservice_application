@@ -5,11 +5,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: redis-pod
+      name: redis-pod
   template:
     metadata:
       labels:
-        app: redis-pod
+        name: redis-pod
     spec:
       containers:
       - name: redis-pod

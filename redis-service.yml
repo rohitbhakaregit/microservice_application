@@ -5,6 +5,7 @@ metadata:
 spec:
   type: ClusterIP 
   selector:
+    name: redis-pod
     app: voting-app
   ports:
   - port: 6379
