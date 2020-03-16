@@ -3,13 +3,14 @@ kind: Deployment
 metadata:
   name: voting-result
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: voting-result
   template:
     metadata:
       labels:
-        app: voting-app
+        app: voting-result
     spec:
       containers:
       - name: voting-result
